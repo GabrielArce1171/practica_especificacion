@@ -42,3 +42,21 @@ necesita calcular el importe del recibo a partir del consumo del mes.
 # mostrar_recibo(importe: float) -> None : muestra el recibo
 
 # Implementa el algoritmo anterior utilizando las funciones del contrato. 
+
+def leer_consumo() -> float:
+    consumo = float(input("Ingrese el consumo del mes en kWh: "))
+    if consumo < 0:
+        consumo = 0
+    return consumo
+
+def calcular_importe(consumo: float) -> float:
+    if consumo <= 150:
+        importe = consumo * 1.00
+    elif consumo <= 280:
+        importe = 150 * 1.00 + (consumo - 150) * 1.50
+    else:
+        importe = 150 * 1.00 + (280 - 150) * 1.50 + (consumo - 280) * 3.00
+    return round(importe, 2)
+
+def mostrar_recibo(importe: float) -> None:
+    print(f"El importe total a pagar es: ${importe:.2f}")
