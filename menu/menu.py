@@ -3,8 +3,8 @@ from ejercicios.ejercicio2_calificacion import LeerParciales, CalcularFinal, Det
 from ejercicios.ejercicio3_compra import LeerSubtotal, CalcularDescuento, CalcularIVA, CalcularTotal, MostrarTicket
 from ejercicios.ejercicio4_estacionamiento import leerMinutos, calcularCobro, mostrarCobro
 from ejercicios.ejercicio5_renta import leerHoras, calcularRenta, mostrarRenta
-from ejercicios.ejercicio6 import leerEdad, calcularPrecio, mostrarPrecio
-from ejercicios.ejercicio7 import leerVelocidad, calcularMulta, mostrarMulta
+from ejercicios.ejercicio6_cine import leerEdad, calcularPrecio, mostrarPrecio
+from ejercicios.ejercicio7_multa import leerVelocidad, calcularMulta, mostrarMulta
  
  
 def ejecutarEjercicio1(): 
@@ -59,6 +59,9 @@ def mostrarMenu():
     print("2. Calificación final") 
     print("3. Total de compra") 
     print("4. Estacionamiento") 
+    print("5. Renta de bicicletas")
+    print("6. Precio de boleto de cine")
+    print("7. Multa por exceso de velocidad")
     print("0. Salir") 
  
  
@@ -75,5 +78,11 @@ def menus():
             ejecutarEjercicio3() 
         elif opcion == "4": 
             ejecutarEjercicio4() 
+        elif opcion == "5": 
+            ejecutarEjercicio5()
+        elif opcion == "6": 
+            ejecutarEjercicio6()
+        elif opcion == "7": 
+            ejecutarEjercicio7()
         elif opcion != "0": 
             print("Opción no válida.") 
