@@ -1,7 +1,7 @@
 from ejercicios.ejercicio1_luz import leer_consumo, calcular_importe, mostrar_recibo
-from ejercicios import ejercicio2_calificacion as ej2 
-from ejercicios import ejercicio3_compra as ej3 
-from ejercicios import ejercicio4_estacionamiento as ej4 
+from ejercicios.ejercicio2_calificacion import LeerParciales, CalcularFinal, DeterminarEstado, MostrarResultado
+from ejercicios.ejercicio3_compra import LeerSubtotal, CalcularDescuento, CalcularIVA, CalcularTotal, MostrarTicket
+from ejercicios.ejercicio4_estacionamiento import leerMinutos, calcularCobro, mostrarCobro
  
  
 def ejecutarEjercicio1(): 
@@ -11,15 +11,25 @@ def ejecutarEjercicio1():
  
  
 def ejecutarEjercicio2(): 
-    print("Ejercicio 2 pendiente.") 
+    calificacion1, calificacion2, calificacion3 = LeerParciales()
+    calificacion_final = CalcularFinal(calificacion1, calificacion2, calificacion3)
+    estado = DeterminarEstado(calificacion1, calificacion2, calificacion3, calificacion_final)
+    MostrarResultado(estado, calificacion_final)
  
  
 def ejecutarEjercicio3(): 
-    print("Ejercicio 3 pendiente.") 
+    monto_compra = LeerSubtotal()
+    descuento = CalcularDescuento(monto_compra)
+    subtotal = monto_compra - descuento
+    iva = CalcularIVA(subtotal)
+    total = CalcularTotal(subtotal, iva)
+    MostrarTicket(subtotal, descuento, iva, total)
  
  
 def ejecutarEjercicio4(): 
-    print("Ejercicio 4 pendiente.") 
+    minutos = leerMinutos()
+    cobro = calcularCobro(minutos)
+    mostrarCobro(cobro)
  
  
 def mostrarMenu(): 
