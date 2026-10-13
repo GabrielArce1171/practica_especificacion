@@ -2,6 +2,9 @@ from ejercicios.ejercicio1_luz import leer_consumo, calcular_importe, mostrar_re
 from ejercicios.ejercicio2_calificacion import LeerParciales, CalcularFinal, DeterminarEstado, MostrarResultado
 from ejercicios.ejercicio3_compra import LeerSubtotal, CalcularDescuento, CalcularIVA, CalcularTotal, MostrarTicket
 from ejercicios.ejercicio4_estacionamiento import leerMinutos, calcularCobro, mostrarCobro
+from ejercicios.ejercicio5_renta import leerHoras, calcularRenta, mostrarRenta
+from ejercicios.ejercicio6 import leerEdad, calcularPrecio, mostrarPrecio
+from ejercicios.ejercicio7 import leerVelocidad, calcularMulta, mostrarMulta
  
  
 def ejecutarEjercicio1(): 
@@ -31,6 +34,23 @@ def ejecutarEjercicio4():
     cobro = calcularCobro(minutos)
     mostrarCobro(cobro)
  
+
+def ejecutarEjercicio5(): 
+    horas_renta = leerHoras()
+    importe = calcularRenta(horas_renta)
+    mostrarRenta(importe)
+
+
+def ejecutarEjercicio6(): 
+    edad = leerEdad()
+    precio = calcularPrecio(edad)
+    mostrarPrecio(precio)
+
+
+def ejecutarEjercicio7(): 
+    velocidad = leerVelocidad()
+    multa = calcularMulta(velocidad)
+    mostrarMulta(multa)
  
 def mostrarMenu(): 
     print() 
