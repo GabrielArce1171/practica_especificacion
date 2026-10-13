@@ -28,10 +28,10 @@ necesita mostrar la calificación final y si el alumno aprobó.
 # 4. Mostrar resultado
 
 # CASOS DE PRUEBA 
-# Caso de prueba 1: (80, 70, 90)
-# Caso de prueba 2: (70, 70, 70)
-# Caso de prueba 3: (100, 100, 40)
-# Caso de prueba 4: (69, 70, 70)
+# Caso de prueba 1: (80, 70, 90) -> Aprobado
+# Caso de prueba 2: (70, 70, 70) -> Aprobado
+# Caso de prueba 3: (100, 100, 40) -> Reprobado
+# Caso de prueba 4: (69, 70, 70) -> Reprobado
  
 # RESTRICCIONES PARA EL AGENTE 
 # - Implementa exactamente este algoritmo, en el mismo orden. 
