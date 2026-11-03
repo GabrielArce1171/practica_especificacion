@@ -24,11 +24,13 @@ class Menu(object):
                 casio.leerNumeros()
                 casio.calcularSuma()
                 casio.mostrarSuma()
+
             elif self.opcion == "2":
                 CFE = Luz ()
                 CFE.leer_consumo()
                 CFE.calcular_costo()
                 CFE.mostrar_resultado()
+                
             elif self.opcion == "3":
                 UNI = Calificacion()
                 UNI.LeerParciales()
