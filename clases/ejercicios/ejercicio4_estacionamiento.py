@@ -41,9 +41,12 @@ muestra el importe a cobrar.
 #       importe = 150
 
 class Estacionamiento:
-    def __init__(self, tiempo_estancia: float):
-        self.tiempo_estancia = tiempo_estancia
+    def __init__(self):
+        self.tiempo_estancia = 0
         self.importe = 0.0
+    
+    def leer_tiempo(self):
+        self.tiempo_estancia = float(input("Ingrese el tiempo de estancia en minutos: "))
 
     def calcular_importe(self):
         horas = (self.tiempo_estancia + 59) // 60  # Redondear hacia arriba

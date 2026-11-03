@@ -40,9 +40,12 @@ necesita mostrar el importe a pagar según las horas de renta.
 # 5. Redondear importe a 2 decimales
 
 class Renta:
-    def __init__(self, horas_renta: float):
-        self.horas_renta = horas_renta
+    def __init__(self):
+        self.horas_renta = 0
         self.importe = 0.0
+
+    def leer_horas(self):
+        self.horas_renta = float(input("Ingrese el número de horas de renta: "))
 
     def calcular_importe(self):
         self.importe = self.horas_renta * 30

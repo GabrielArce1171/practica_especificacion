@@ -47,12 +47,15 @@ subtotal, descuento, IVA y total.
 # 6. total = subtotal + iva
 
 class Compra:
-    def __init__(self, monto: float):
-        self.monto = monto
+    def __init__(self):
+        self.monto = 0
         self.subtotal = 0.0
         self.descuento = 0.0
         self.iva = 0.0
         self.total = 0.0
+
+    def leer_datos(self):
+        self.monto = float(input("Ingrese el monto de la compra: "))
 
     def calcular_descuento(self):
         if self.monto >= 5000:
